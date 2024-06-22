@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-12">
+        <h1 class="header">Weather Check</h1>
+        </div>
+        <div class="col-md-4 pt-2">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control-sm" id="city" [(ngModel)]="city">               
+            </div>
+        </div>
+        <div class="col-md-2 pt-4 submitbtn">
+            <button class="btn btn-primary" (click)="getWeather(city)">Get Weather</button>
+        </div>
+        <div class="col-md-4 pt-4">
+            <div class="card">
+                <div class="card-top">
+                                    <h6>Bangalore, India</h6>
+                <h6>Thurday 12 PM</h6>
+                        <h6>{{weatherData.location.name +' , ' +  weatherData.location.region + ' , ' + weatherData.location.country }}</h6>
+                        <h6>{{weatherData.location.localtime.timestamp() }}</h6>
+                </div>
+
+            </div>
+        </div>
+
+        <div *ngIf="weatherData">
+            <h2>{{weatherData.location.name}}</h2>
+            <p>{{weatherData.current.temp_c}}</p>
+            <p>{{weatherData.current_humidity}}°C</p>
+        </div>
+        
+    </div>
