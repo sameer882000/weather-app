@@ -1,15 +1,264 @@
+body {
+    background-color: #e1f5fe;
+    /* Light blue background */
+    font-family: 'Roboto', sans-serif;
+    /* Updated font */
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    /* Wider container */
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    /* Softer corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    background-color: #ffffff;
+    /* White background for container */
+}
+
+.header-section {
+    margin-bottom: 30px;
+}
+
 .header {
-    text-align: center;
+    color: #00796b;
+    /* Teal color */
+    font-size: 3.5em;
+    font-weight: 700;
+    /* Bold font weight */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
 }
-.form-group {
+
+.sub-header {
+    color: #004d40;
+    /* Darker teal color */
+    font-size: 1.2em;
+    font-weight: 300;
+    /* Lighter font weight */
+    margin-bottom: 20px;
+    /* Space below sub-header */
+}
+
+.input-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-.submitbtn {
-    margin-top: 10px;
+
+.form-control {
+    padding: 15px;
+    /* Increased padding */
+    border-radius: 5px 0 0 5px;
+    /* Rounded left side */
+    border: 1px solid #00796b;
+    /* Teal border */
+    width: 70%;
+    /* Input takes 70% of the width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Added box-shadow transition */
+    font-family: 'Roboto', sans-serif;
+    /* Font for input */
+}
+
+.form-control:focus {
+    border-color: #004d40;
+    /* Darker border on focus */
+    box-shadow: 0 0 10px rgba(0, 121, 107, 0.5);
+    /* Enhanced shadow */
+}
+
+.btn {
+    border-radius: 0 5px 5px 0;
+    /* Rounded right side */
+    padding: 15px 25px;
+    /* Button padding */
+    background-color: #00796b;
+    /* Teal button */
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    /* Hover effects */
+    font-weight: 700;
+    /* Bold text */
+    border: none;
+    /* No border */
+    font-family: 'Roboto', sans-serif;
+    /* Font for button */
+}
+
+.btn:hover {
+    background-color: #004d40;
+    /* Darker teal on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button */
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    /* Gradient background */
+    border-radius: 15px;
+    /* Softer corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    margin-bottom: 30px;
+    /* Margin below weather card */
+}
+
+.card-header {
+    background-color: #00796b;
+    /* Teal header */
+    color: white;
+    /* White text */
+    padding: 25px;
+    /* Increased padding */
+    border-top-left-radius: 15px;
+    /* Softer corners */
+    border-top-right-radius: 15px;
+    /* Softer corners */
+}
+
+.card-body {
+    padding: 20px;
+    /* Padding inside card */
     text-align: center;
+    /* Center text */
 }
-.card-top {
+
+.weather-icon {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    /* Column layout */
+    align-items: center;
+    /* Center items */
+}
+
+.main-icon {
+    width: 120px;
+    /* Increased icon size */
+}
+
+.current-condition {
+    font-weight: 400;
+    /* Normal font weight */
+    font-size: 1.5em;
+    /* Size */
+    color: #004d40;
+    /* Darker teal */
+}
+
+.current-temp {
+    font-size: 3em;
+    /* Increased size for current temperature */
+    color: #00796b;
+    /* Teal color */
+    font-weight: 700;
+    /* Bold font weight */
+}
+
+.additional-info p {
+    margin: 5px 0;
+    /* Margin for additional info */
+    color: #555;
+    /* Darker gray */
+    font-weight: 400;
+    /* Normal font weight */
+}
+
+.forecast-section {
+    margin-top: 40px;
+    /* Space above forecast section */
+}
+
+.forecast-header {
+    text-align: center;
+    /* Center text */
+    font-size: 2em;
+    /* Size */
+    color: #00796b;
+    /* Teal color */
+    margin-bottom: 20px;
+    /* Margin below */
+    font-weight: 700;
+    /* Bold font weight */
+}
+
+.hourly-forecast {
+    display: flex;
+    /* Flex layout */
+    flex-wrap: wrap;
+    /* Wrap items */
+    justify-content: center;
+    /* Center items */
+}
+
+.hour-card {
+    background-color: #ffffff;
+    /* White background */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow */
+    padding: 15px;
+    /* Padding */
+    margin: 10px;
+    /* Margin */
+    text-align: center;
+    /* Center text */
+    flex: 0 1 90px;
+    /* Set width for cards */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+}
+
+.hour-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.hour-icon {
+    width: 50px;
+    /* Increased width for hour icon */
+}
+
+.hour-time {
+    font-size: 0.9em;
+    /* Size */
+    color: #555;
+    /* Darker gray */
+    font-weight: 400;
+    /* Normal font weight */
+}
+
+.hour-temp {
+    font-size: 1.2em;
+    /* Size for temperature */
+    color: #00796b;
+    /* Teal color */
+    font-weight: 700;
+    /* Bold font weight */
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5em;
+        /* Smaller header on small screens */
+    }
+
+    .sub-header {
+        font-size: 1em;
+        /* Smaller sub-header */
+    }
+
+    .current-temp {
+        font-size: 2.5em;
+        /* Smaller temperature on small screens */
+    }
+
+    .hour-card {
+        flex: 0 1 70px;
+        /* Adjust size on small screens */
+    }
 }
