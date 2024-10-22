@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MausamService {
   api_key = 'e6a8eaab82c9474ba3091629242206';
-  uri = `http://api.weatherapi.com/v1/current.json?key=${this.api_key}&q=`;
-  uri1 = `http://api.weatherapi.com/v1/forecast.json?key=${this.api_key}&q=`;
+  uri = `https://api.weatherapi.com/v1/current.json?key=${this.api_key}&q=`;
+  uri1 = `https://api.weatherapi.com/v1/forecast.json?key=${this.api_key}&q=`;
   // uri = 'hello';
   constructor(private http: HttpClient) {
   }
